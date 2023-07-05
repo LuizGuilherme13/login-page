@@ -5,17 +5,17 @@ String userDataJson = '''
     "user":[
       {
         "id": 1,
-        "email": "dev1@example.com",
+        "login": "dev1",
         "password": "123"
       },
             {
         "id": 2,
-        "email": "dev2@example.com",
+        "login": "dev2",
         "password": "abc321"
       },
       {
         "id": 3,
-        "email": "dev3@example.com",
+        "login": "dev3",
         "password": "admin123"
       }
     ]

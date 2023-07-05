@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class CustomTextInput extends StatefulWidget {
+class FormInput extends StatefulWidget {
   final TextEditingController controller;
   final String label;
   final bool obscureText;
   final String? Function(String?)? validator;
 
-  const CustomTextInput({
+  const FormInput({
     super.key,
     required this.controller,
     required this.label,
@@ -15,10 +15,10 @@ class CustomTextInput extends StatefulWidget {
   });
 
   @override
-  State<CustomTextInput> createState() => _CustomTextInput();
+  State<FormInput> createState() => _FormInput();
 }
 
-class _CustomTextInput extends State<CustomTextInput> {
+class _FormInput extends State<FormInput> {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
