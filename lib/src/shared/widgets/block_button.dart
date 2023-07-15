@@ -6,6 +6,7 @@ class BlockButton extends StatelessWidget {
   final Function()? onPressed;
 
   final buttonStyle = ElevatedButton.styleFrom(
+    backgroundColor: Color(0xFF064E3B),
     textStyle: const TextStyle(fontSize: 18),
     padding: const EdgeInsets.all(18),
   );

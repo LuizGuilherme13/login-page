@@ -7,14 +7,16 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(primarySwatch: Colors.green),
-      routes: {
-        '/': (context) => const LoginPage(),
-        '/home': (context) => const HomePage()
-      },
-      // home: const LoginPage(),
+    return SafeArea(
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        // theme: ThemeData(primarySwatch: Color(0xFF064E3B)),
+        routes: {
+          '/': (context) => LoginPage(),
+          '/home': (context) => const HomePage()
+        },
+        // home: const LoginPage(),
+      ),
     );
   }
 }

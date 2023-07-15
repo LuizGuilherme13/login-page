@@ -1,46 +1,32 @@
 class LoginResponse {
-  User user;
-
-  LoginResponse({required this.user});
-
-  factory LoginResponse.fromJson(Map<String, dynamic> json) =>
-      LoginResponse(user: User.fromJson(json['user_info']));
-}
-
-class User {
-  Info info;
-
-  User({required this.info});
-
-  factory User.fromJson(Map<String, dynamic> json) =>
-      User(info: Info.fromJson(json['info']));
-}
-
-class Info {
   int id;
-  String name;
-  String username;
-  String avatar;
-  int age;
-  String city;
-  String country;
+  String userName;
+  String email;
+  String firstName;
+  String lastName;
+  String gender;
+  String image;
+  String token;
 
-  Info({
+  LoginResponse({
     required this.id,
-    required this.name,
-    required this.username,
-    required this.avatar,
-    required this.age,
-    required this.city,
-    required this.country,
+    required this.userName,
+    required this.email,
+    required this.firstName,
+    required this.lastName,
+    required this.gender,
+    required this.image,
+    required this.token,
   });
 
-  factory Info.fromJson(Map<String, dynamic> json) => Info(
-      id: json['user_id'],
-      name: json['name'],
-      username: json['username'],
-      avatar: json['avatar'],
-      age: json['age'],
-      city: json['city'],
-      country: json['country']);
+  factory LoginResponse.fromJson(Map<String, dynamic> json) => LoginResponse(
+        id: json['id'],
+        userName: json['username'],
+        email: json['email'],
+        firstName: json['firstName'],
+        lastName: json['lastName'],
+        gender: json['gender'],
+        image: json['image'],
+        token: json['token'],
+      );
 }
